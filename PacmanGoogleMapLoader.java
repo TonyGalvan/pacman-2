@@ -15,32 +15,77 @@ public class PacmanGoogleMapLoader implements StaticMapLoader
         addSmallItems(map);
 
         addPowerItems(map);
-        
+
         map.addObject(new PacMan(), 50, 150);
+
+        map.addObject(new RedPhantom(), map.getWidth()/2, 210);
+
+        map.addObject(new BluePhantom(), map.getWidth()/2 - 50, map.getHeight()/2);
+
+        map.addObject(new PinkPhantom(), map.getWidth()/2, map.getHeight()/2);
+
+        map.addObject(new OrangePhantom(), map.getWidth()/2 + 50, map.getHeight()/2);
+        
+
 
         return map;
     }
 
     void addWalls(Map map)
     {
-        map.addObject(new Wall(), 50, 50);
-        map.addObject(new Wall(), 100, 50);
-        map.addObject(new Wall(), 150, 50);
-        map.addObject(new Wall(), 200, 50);
-        map.addObject(new Wall(), 250, 50);
+       
+        for(int x = 200; x < 320; x+=10) {
+            map.addObject(new Wall(), x, 100);
+        }
+        
+        for(int x = 80; x < 290; x+=10) {
+            map.addObject(new Wall(), x, 420);
+        }
+        
+        for(int x = 400; x < 500; x+=10) {
+            map.addObject(new Wall(), x, 420);
+        }
+        
+        for(int x = 180; x < 230; x+=10) {
+            map.addObject(new Wall(), x, 550);
+        }
+        
+        for(int x = 600; x < 650; x+=10) {
+            map.addObject(new Wall(), x, 500);
+        }
+        
+        for(int x = 500; x < 580; x+=10) {
+            map.addObject(new Wall(), x, 100);
+        }
+        
 
-        map.addObject(new Wall(), 300, 150);
-        map.addObject(new Wall(), 300, 200);
-        map.addObject(new Wall(), 300, 250);
-        map.addObject(new Wall(), 300, 400);
-        map.addObject(new Wall(), 300, 450);
-        map.addObject(new Wall(), 300, 500);
+        for(int x = 0; x < 800; x+=20) {
+            map.addObject(new Wall(), x, 0);
+        }
 
-        map.addObject(new Wall(), 450, 650);
-        map.addObject(new Wall(), 500, 650);
-        map.addObject(new Wall(), 550, 650);
-        map.addObject(new Wall(), 600, 650);
-        map.addObject(new Wall(), 650, 650);
+        for(int x = 0; x < 800; x+=20) {
+            map.addObject(new Wall(), x, 700);
+        }
+
+        for(int y = 0; y < 700; y+=20) {
+            map.addObject(new Wall(), 0, y);
+        }
+
+        for(int y = 0; y < 700; y+=20) {
+            map.addObject(new Wall(), 800, y);
+        }
+        
+        for(int y = 100; y < 250; y+=10) {
+            map.addObject(new Wall(), 400, y);
+        }
+        
+        for(int y = 100; y < 300; y+=10) {
+            map.addObject(new Wall(), 650, y);
+        }
+        
+        for(int y = 550; y < 650; y+=10) {
+            map.addObject(new Wall(), 500, y);
+        }
     }
 
     void addSmallItems(Map map)

@@ -1,3 +1,5 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
 /**
  * Write a description of class Banana here.
  * 
@@ -6,5 +8,9 @@
  */
 public class Banana extends Fruit
 {
-
+    private static final GreenfootImage image = new GreenfootImage("images/banana.png");
+    
+    public Banana(){
+        setImage(image);
+    }
 }

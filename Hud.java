@@ -12,8 +12,11 @@ public class Hud extends Actor
      * Act - do whatever the Hud wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act() 
-    {
-        // Add your action code here.
-    }    
+    
+    private int score=0;
+
+    private static final GreenfootImage image = new GreenfootImage("images/score.png");
+    public Hud(){
+        setImage(image);
+    }   
 }

@@ -1,4 +1,4 @@
-import greenfoot.*;
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class PowerPoint here.
@@ -12,5 +12,8 @@ public class PowerPoint extends Item
     
     public PowerPoint(){
         setImage(image);
+        
+        points=5;
+
     }
 }

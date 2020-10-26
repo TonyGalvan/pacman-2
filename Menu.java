@@ -29,7 +29,7 @@ public class Menu extends World
         StrowberryButton strowberryButton = new StrowberryButton();
         addObject(strowberryButton,91,92);
         strowberryButton.setLocation(264,175);
-        
+
         showText("PACMAN", 200, 100);
     }
 }
